@@ -1,0 +1,39 @@
+{
+  "name": "clab",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node .",
+    "dev": "nodemon ."
+  },
+  "bin": {
+    "@shahar12345/clab": "bin/clab",
+    "clab": "bin/clab"
+  },
+  "keywords": [
+    "cli",
+    "generator"
+  ],
+  "author": "Shahar Eliyahu",
+  "license": "MIT",
+  "dependencies": {
+    "esm": "^3.2.25",
+    "inquirer": "^8.0.0",
+    "listr": "^0.14.3",
+    "ora": "^5.4.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShaharEli/colabcli.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "bugs": {
+    "url": "https://github.com/ShaharEli/colabcli/issues"
+  },
+  "homepage": "https://github.com/ShaharEli/colabcli#readme",
+  "description": "Colab's team cli"
+}
