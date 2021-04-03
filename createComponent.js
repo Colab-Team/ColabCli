@@ -33,15 +33,15 @@ const createComponent = async (name, options) => {
     try {
       mkdirSync(componentPath);
       spinner.text = "Loading style file";
-      const styleFile = readFileSync(componentsConfig + "/styles.js");
+      const styleFile = readFileSync(componentsConfig + "/styles.ts");
       spinner.text = "Loading component file";
       const styledComponentsFile = readFileSync(
-        componentsConfig + "/componentWithStyles.js"
+        componentsConfig + "/componentWithStyles.tsx"
       );
       spinner.text = "Writing style file";
-      writeFileSync(componentPath + "/styles.js", styleFile);
+      writeFileSync(componentPath + "/styles.ts", styleFile);
       spinner.text = "Writing component file";
-      writeFileSync(componentPath + `/${name}.js`, styledComponentsFile);
+      writeFileSync(componentPath + `/${name}.tsx`, styledComponentsFile);
       spinner.succeed();
     } catch ({ message }) {
       spinner.text = message;
@@ -51,10 +51,10 @@ const createComponent = async (name, options) => {
     const spinner2 = ora(`Loading component file`).start();
     try {
       const componentFile = readFileSync(
-        componentsConfig + "/componentWithoutStyles.js"
+        componentsConfig + "/componentWithoutStyles.ts"
       );
       spinner2.text = "Writing component file";
-      writeFileSync(componentsPath + `/${name}.js`, componentFile);
+      writeFileSync(componentsPath + `/${name}.tsx`, componentFile);
       spinner2.succeed();
     } catch ({ message }) {
       spinner.text = message;
