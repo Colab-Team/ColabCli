@@ -51,7 +51,7 @@ const createComponent = async (name, options) => {
     const spinner2 = ora(`Loading component file`).start();
     try {
       const componentFile = readFileSync(
-        componentsConfig + "/componentWithoutStyles.ts"
+        componentsConfig + "/componentWithoutStyles.tsx"
       );
       spinner2.text = "Writing component file";
       writeFileSync(componentsPath + `/${name}.tsx`, componentFile);
