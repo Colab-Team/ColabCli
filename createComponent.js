@@ -57,8 +57,8 @@ const createComponent = async (name, options) => {
       writeFileSync(componentsPath + `/${name}.tsx`, componentFile);
       spinner2.succeed();
     } catch ({ message }) {
-      spinner.text = message;
-      spinner.fail();
+      spinner2.text = message;
+      spinner2.fail();
     }
   }
 };
